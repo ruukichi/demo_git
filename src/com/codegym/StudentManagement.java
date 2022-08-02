@@ -6,28 +6,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StudentManagement {
-    private static List<Student> students = new ArrayList<>();
+    private static List<Student> studentList = new ArrayList<>();
 
 
     public static void displayListStudent() {
-        for (Student student : students) {
+        for (Student student : studentList) {
             System.out.println(student);
         }
     }
 
     public static void addStudent(Student student) {
-        students.add(student);
+        studentList.add(student);
     }
 
     public int size() {
-        return students.size();
+        return studentList.size();
     }
 
     public static Student findStudentByName(String name) {
         Student student = null;
-        for (int index = 0; index < students.size(); index++) {
-            if (students.get(index).getName().equals(name)){
-                student = students.get(index);
+        for (int index = 0; index < studentList.size(); index++) {
+            if (studentList.get(index).getName().equals(name)){
+                student = studentList.get(index);
             }
         }
         return student;
